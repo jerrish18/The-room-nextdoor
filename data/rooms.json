@@ -1,0 +1,489 @@
+[
+  {
+    "code": "CHN241",
+    "status": "ESCAPED",
+    "createdAt": 1794751312532,
+    "startedAt": 1794751312590,
+    "escapedAt": 1794751315820,
+    "remainingSeconds": 1797,
+    "elapsedSeconds": 3,
+    "auxiliaryUsed": false,
+    "hintsUsed": 0,
+    "unlockedHints": {},
+    "players": {
+      "P1_SECURITY": {
+        "playerId": "3f9245abb1dd",
+        "name": "Arjun",
+        "role": "P1_SECURITY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      },
+      "P2_STUDY": {
+        "playerId": "08afca15eadf",
+        "name": "Kavya",
+        "role": "P2_STUDY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      }
+    },
+    "puzzle": {
+      "studyLightsOn": false,
+      "muralInspected": false,
+      "deskDrawerOpen": true,
+      "puzzle1Solved": true,
+      "fuseInserted": true,
+      "cctvChannel": 1,
+      "cctvNightVision": false,
+      "junctionSwitches": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "wireOrder": [
+        "TEAL",
+        "AMBER",
+        "CRIMSON"
+      ],
+      "puzzle2Solved": true,
+      "dvrMinute": 45,
+      "calendarTilted": true,
+      "wallSafeOpen": true,
+      "keycardLocation": "INSERTED",
+      "puzzle3Solved": true,
+      "dvrOffsetFixed": true,
+      "dualHoldProgress": 0
+    },
+    "inventory": [
+      {
+        "id": "fuse_15a",
+        "name": "15A Reserve Fuse",
+        "description": "Brass-capped ceramic cartridge fuse for Flat 4B’s wall junction box.",
+        "holder": "P2_STUDY"
+      },
+      {
+        "id": "blindspot_photo",
+        "name": "Corridor Mirror Polaroid",
+        "description": "Note on back: \"Check CAM 02 mirror reflection & CAM 03 in IR Night Vision once Junction Relay powers up.\"",
+        "holder": "SHARED"
+      },
+      {
+        "id": "override_keycard",
+        "name": "Security Override Keycard",
+        "description": "Magnetic supervisor card. Must be slid through the inter-room Air Vent Slot to the Security Booth.",
+        "holder": "P1_SECURITY"
+      },
+      {
+        "id": "ntp_memo",
+        "name": "Supervisor NTP Memo",
+        "description": "\"Set DVR clock +05:00 ahead to loop empty 21:40 corridor while clearing 4B. Reset clock & hold both latches to exit.\"",
+        "holder": "SHARED"
+      }
+    ],
+    "clues": [
+      {
+        "id": "clue-intro",
+        "title": "Monsoon Blackout · 21:40 IST",
+        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp 5 minutes ahead (21:45). Backup battery at 30:00.",
+        "authorRole": "SYSTEM",
+        "createdAt": 1794751312532
+      },
+      {
+        "id": "clue-drawer-solved",
+        "title": "Brass Desk Drawer Unlocked (4816)",
+        "detail": "Found 15A Reserve Fuse and a Polaroid mentioning CAM 02’s hallway mirror and CAM 03 IR mode.",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751312691
+      },
+      {
+        "id": "clue-junction-solved",
+        "title": "240V Conduit Relay Balanced",
+        "detail": "Power restored to Flat 4B’s hidden wall safe and Security Booth’s CAM 01 DVR replay scrubber.",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751313009
+      },
+      {
+        "id": "clue-safe-solved",
+        "title": "Wall Safe Opened (9527)",
+        "detail": "Retrieved Security Override Keycard and NTP Memo explaining the +05:00 loop. Slide the Keycard through the Air Vent Slot!",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751313061
+      },
+      {
+        "id": "clue-clock-live",
+        "title": "DVR Clock Restored to LIVE (21:40)",
+        "detail": "False loop cleared. Both Corridor Maglocks are ARMED — hold both door latches simultaneously for 2.5s!",
+        "authorRole": "P1_SECURITY",
+        "createdAt": 1794751313166
+      }
+    ],
+    "chat": [
+      {
+        "id": "chat-welcome",
+        "senderName": "Building Intercom",
+        "senderRole": "SYSTEM",
+        "text": "Emergency backup active. Both rooms locked on Floor 4. Coordinate over radio to release the magnetic corridor locks.",
+        "timestamp": 1794751312532
+      }
+    ],
+    "lastEventBanner": {
+      "id": "8079ed584333",
+      "text": "Both magnetic corridor doors unlocked!"
+    }
+  },
+  {
+    "code": "ADY671",
+    "status": "PLAYING",
+    "createdAt": 1794751337797,
+    "startedAt": 1794751339474,
+    "escapedAt": null,
+    "remainingSeconds": 1695,
+    "elapsedSeconds": 105,
+    "auxiliaryUsed": false,
+    "hintsUsed": 0,
+    "unlockedHints": {},
+    "players": {
+      "P1_SECURITY": {
+        "playerId": "a18d273e7f09",
+        "name": "Arjun",
+        "role": "P1_SECURITY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      },
+      "P2_STUDY": {
+        "playerId": "e68ede78a5ac",
+        "name": "Kavya",
+        "role": "P2_STUDY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      }
+    },
+    "puzzle": {
+      "studyLightsOn": false,
+      "muralInspected": false,
+      "deskDrawerOpen": false,
+      "puzzle1Solved": false,
+      "fuseInserted": false,
+      "cctvChannel": 1,
+      "cctvNightVision": false,
+      "junctionSwitches": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "wireOrder": [
+        "AMBER",
+        "TEAL",
+        "CRIMSON"
+      ],
+      "puzzle2Solved": false,
+      "dvrMinute": 45,
+      "calendarTilted": false,
+      "wallSafeOpen": false,
+      "keycardLocation": "SAFE",
+      "puzzle3Solved": false,
+      "dvrOffsetFixed": false,
+      "dualHoldProgress": 0
+    },
+    "inventory": [],
+    "clues": [
+      {
+        "id": "clue-intro",
+        "title": "Monsoon Blackout · 21:40 IST",
+        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp 5 minutes ahead (21:45). Backup battery at 30:00.",
+        "authorRole": "SYSTEM",
+        "createdAt": 1794751337797
+      },
+      {
+        "id": "clue-glow-symbols",
+        "title": "Flat 4B Glow Wall Symbols",
+        "detail": "1. Trident ↑ · 2. Crescent → · 3. Lotus ← · 4. Surge ↓",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751340260
+      }
+    ],
+    "chat": [
+      {
+        "id": "chat-welcome",
+        "senderName": "Building Intercom",
+        "senderRole": "SYSTEM",
+        "text": "Emergency backup active. Both rooms locked on Floor 4. Coordinate over radio to release the magnetic corridor locks.",
+        "timestamp": 1794751337797
+      }
+    ],
+    "lastEventBanner": {
+      "id": "93913262d62c",
+      "text": "Security cut Flat 4B ceiling light — check the plaster wall!",
+      "targetRole": "P2_STUDY"
+    }
+  },
+  {
+    "code": "MYL478",
+    "status": "PLAYING",
+    "createdAt": 1794751396201,
+    "startedAt": 1794751398172,
+    "escapedAt": null,
+    "remainingSeconds": 1754,
+    "elapsedSeconds": 46,
+    "auxiliaryUsed": false,
+    "hintsUsed": 0,
+    "unlockedHints": {},
+    "players": {
+      "P1_SECURITY": {
+        "playerId": "1e2692b7aada",
+        "name": "Arjun",
+        "role": "P1_SECURITY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      },
+      "P2_STUDY": {
+        "playerId": "8f8e00529152",
+        "name": "Kavya",
+        "role": "P2_STUDY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      }
+    },
+    "puzzle": {
+      "studyLightsOn": false,
+      "muralInspected": false,
+      "deskDrawerOpen": true,
+      "puzzle1Solved": true,
+      "fuseInserted": true,
+      "cctvChannel": 2,
+      "cctvNightVision": true,
+      "junctionSwitches": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "wireOrder": [
+        "AMBER",
+        "TEAL",
+        "CRIMSON"
+      ],
+      "puzzle2Solved": false,
+      "dvrMinute": 45,
+      "calendarTilted": false,
+      "wallSafeOpen": false,
+      "keycardLocation": "SAFE",
+      "puzzle3Solved": false,
+      "dvrOffsetFixed": false,
+      "dualHoldProgress": 0
+    },
+    "inventory": [
+      {
+        "id": "fuse_15a",
+        "name": "15A Reserve Fuse",
+        "description": "Brass-capped ceramic cartridge fuse for Flat 4B’s wall junction box.",
+        "holder": "P2_STUDY"
+      },
+      {
+        "id": "blindspot_photo",
+        "name": "Corridor Mirror Polaroid",
+        "description": "Note on back: \"Check CAM 02 mirror reflection & CAM 03 in IR Night Vision once Junction Relay powers up.\"",
+        "holder": "SHARED"
+      }
+    ],
+    "clues": [
+      {
+        "id": "clue-intro",
+        "title": "Monsoon Blackout · 21:40 IST",
+        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp 5 minutes ahead (21:45). Backup battery at 30:00.",
+        "authorRole": "SYSTEM",
+        "createdAt": 1794751396201
+      },
+      {
+        "id": "clue-glow-symbols",
+        "title": "Flat 4B Glow Wall Symbols",
+        "detail": "1. Trident ↑ · 2. Crescent → · 3. Lotus ← · 4. Surge ↓",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751398955
+      },
+      {
+        "id": "clue-drawer-solved",
+        "title": "Brass Desk Drawer Unlocked (4816)",
+        "detail": "Found 15A Reserve Fuse and a Polaroid mentioning CAM 02’s hallway mirror and CAM 03 IR mode.",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751399601
+      }
+    ],
+    "chat": [
+      {
+        "id": "chat-welcome",
+        "senderName": "Building Intercom",
+        "senderRole": "SYSTEM",
+        "text": "Emergency backup active. Both rooms locked on Floor 4. Coordinate over radio to release the magnetic corridor locks.",
+        "timestamp": 1794751396201
+      },
+      {
+        "id": "25d44bd5f3a9",
+        "senderName": "Kavya",
+        "senderRole": "P2_STUDY",
+        "text": "Drawer open — inserted 15A fuse",
+        "timestamp": 1794751399995
+      }
+    ],
+    "lastEventBanner": {
+      "id": "d04741ef64bb",
+      "text": "15A Fuse inserted! CAM 02, CAM 03 & CAM 04 are now online.",
+      "targetRole": "P1_SECURITY"
+    }
+  },
+  {
+    "code": "CHN440",
+    "status": "ESCAPED",
+    "createdAt": 1794751418573,
+    "startedAt": 1794751420206,
+    "escapedAt": 1794751431058,
+    "remainingSeconds": 1789,
+    "elapsedSeconds": 11,
+    "auxiliaryUsed": false,
+    "hintsUsed": 0,
+    "unlockedHints": {},
+    "players": {
+      "P1_SECURITY": {
+        "playerId": "ddd4bc887231",
+        "name": "Arjun",
+        "role": "P1_SECURITY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      },
+      "P2_STUDY": {
+        "playerId": "4f58f26232b2",
+        "name": "Kavya",
+        "role": "P2_STUDY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      }
+    },
+    "puzzle": {
+      "studyLightsOn": false,
+      "muralInspected": false,
+      "deskDrawerOpen": true,
+      "puzzle1Solved": true,
+      "fuseInserted": true,
+      "cctvChannel": 1,
+      "cctvNightVision": true,
+      "junctionSwitches": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "wireOrder": [
+        "TEAL",
+        "AMBER",
+        "CRIMSON"
+      ],
+      "puzzle2Solved": true,
+      "dvrMinute": 41,
+      "calendarTilted": true,
+      "wallSafeOpen": true,
+      "keycardLocation": "INSERTED",
+      "puzzle3Solved": true,
+      "dvrOffsetFixed": true,
+      "dualHoldProgress": 0
+    },
+    "inventory": [
+      {
+        "id": "fuse_15a",
+        "name": "15A Reserve Fuse",
+        "description": "Brass-capped ceramic cartridge fuse for Flat 4B’s wall junction box.",
+        "holder": "P2_STUDY"
+      },
+      {
+        "id": "blindspot_photo",
+        "name": "Corridor Mirror Polaroid",
+        "description": "Note on back: \"Check CAM 02 mirror reflection & CAM 03 in IR Night Vision once Junction Relay powers up.\"",
+        "holder": "SHARED"
+      },
+      {
+        "id": "override_keycard",
+        "name": "Security Override Keycard",
+        "description": "Magnetic supervisor card. Must be slid through the inter-room Air Vent Slot to the Security Booth.",
+        "holder": "P1_SECURITY"
+      },
+      {
+        "id": "ntp_memo",
+        "name": "Supervisor NTP Memo",
+        "description": "\"Set DVR clock +05:00 ahead to loop empty 21:40 corridor while clearing 4B. Reset clock & hold both latches to exit.\"",
+        "holder": "SHARED"
+      }
+    ],
+    "clues": [
+      {
+        "id": "clue-intro",
+        "title": "Monsoon Blackout · 21:40 IST",
+        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp 5 minutes ahead (21:45). Backup battery at 30:00.",
+        "authorRole": "SYSTEM",
+        "createdAt": 1794751418573
+      },
+      {
+        "id": "clue-glow-symbols",
+        "title": "Flat 4B Glow Wall Symbols",
+        "detail": "1. Trident ↑ · 2. Crescent → · 3. Lotus ← · 4. Surge ↓",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751421093
+      },
+      {
+        "id": "clue-drawer-solved",
+        "title": "Brass Desk Drawer Unlocked (4816)",
+        "detail": "Found 15A Reserve Fuse and a Polaroid mentioning CAM 02’s hallway mirror and CAM 03 IR mode.",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751421780
+      },
+      {
+        "id": "clue-junction-solved",
+        "title": "240V Conduit Relay Balanced",
+        "detail": "Power restored to Flat 4B’s hidden wall safe and Security Booth’s CAM 01 DVR replay scrubber.",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751425092
+      },
+      {
+        "id": "clue-safe-solved",
+        "title": "Wall Safe Opened (9527)",
+        "detail": "Retrieved Security Override Keycard and NTP Memo explaining the +05:00 loop. Slide the Keycard through the Air Vent Slot!",
+        "authorRole": "P2_STUDY",
+        "createdAt": 1794751426744
+      },
+      {
+        "id": "clue-clock-live",
+        "title": "DVR Clock Restored to LIVE (21:40)",
+        "detail": "False loop cleared. Both Corridor Maglocks are ARMED — hold both door latches simultaneously for 2.5s!",
+        "authorRole": "P1_SECURITY",
+        "createdAt": 1794751428113
+      }
+    ],
+    "chat": [
+      {
+        "id": "chat-welcome",
+        "senderName": "Building Intercom",
+        "senderRole": "SYSTEM",
+        "text": "Emergency backup active. Both rooms locked on Floor 4. Coordinate over radio to release the magnetic corridor locks.",
+        "timestamp": 1794751418573
+      },
+      {
+        "id": "87aefdd2e24a",
+        "senderName": "Kavya",
+        "senderRole": "P2_STUDY",
+        "text": "Drawer open — inserted 15A fuse",
+        "timestamp": 1794751422180
+      }
+    ],
+    "lastEventBanner": {
+      "id": "a90f32bb3003",
+      "text": "Both magnetic corridor doors unlocked!"
+    }
+  }
+]

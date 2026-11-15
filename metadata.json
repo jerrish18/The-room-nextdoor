@@ -1,0 +1,8 @@
+{
+  "name": "The Room Next Door",
+  "description": "A two-player online escape room set during a Chennai apartment blackout. Explore adjoining rooms on separate phones, share clues in real time, and unlock both doors before backup power runs out.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
