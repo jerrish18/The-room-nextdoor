@@ -54,7 +54,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
       setCopiedLink(true);
       setTimeout(() => setCopiedLink(false), 2000);
     } catch {
-      // Fallback select
+      // Ignore clipboard failure
     }
   };
 
@@ -70,13 +70,13 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
           <div className="lg:col-span-5 bg-[#161A22] border border-white/10 rounded-2xl p-6 flex flex-col justify-between">
             <div>
               <p className="text-xs text-amber-400 font-medium tracking-wide">
-                Case 01 · Marina Towers, Mylapore
+                Complete Campaign · Marina Towers, Mylapore
               </p>
               <h1 className="text-3xl font-bold tracking-tight text-white mt-2">
                 The Room Next Door
               </h1>
               <p className="text-sm text-zinc-400 leading-relaxed mt-3">
-                A monsoon blackout traps two friends in adjoining rooms on the 4th floor. Outside, the hallway CCTV monitor displays a timestamp five minutes in the future.
+                Twelve connected chapters spanning Floor 4, the service lift shaft, rooftop relay, chemical darkroom, flooded cistern, and sub-basement vault. Untimed speedrun clock with automatic chapter checkpoints.
               </p>
 
               <div className="mt-6 pt-5 border-t border-white/10">
@@ -99,7 +99,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
             </div>
 
             <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-zinc-400">
-              <span>20–30 min co-op · 4 linked puzzles</span>
+              <span>90+ min co-op · 12 Chapters</span>
               <button
                 type="button"
                 onClick={() => {
@@ -118,9 +118,9 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
             <div>
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <h2 className="text-lg font-semibold text-white">Room Assignments</h2>
+                  <h2 className="text-lg font-semibold text-white">Investigator Roles</h2>
                   <p className="text-xs text-zinc-400 mt-0.5">
-                    Each player sees different clues and physical controls.
+                    Each wing gives both players unique rooms, tools, and controls.
                   </p>
                 </div>
                 <button
@@ -132,12 +132,12 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                   className="min-h-[44px] px-3.5 py-2 rounded-xl bg-[#1E2430] hover:bg-zinc-800 border border-white/10 text-xs font-medium text-zinc-200 flex items-center gap-2 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                 >
                   <ArrowLeftRight className="w-4 h-4 text-amber-400" />
-                  <span>Swap Rooms</span>
+                  <span>Swap Roles</span>
                 </button>
               </div>
 
               <div className="mt-5 space-y-3">
-                {/* Slot 1: Security Booth */}
+                {/* Slot 1: Systems & Security */}
                 <div
                   className={`p-4 rounded-xl border transition-colors ${
                     myRole === 'P1_SECURITY'
@@ -152,13 +152,13 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                       </div>
                       <div className="min-w-0">
                         <div className="text-sm font-semibold text-white flex items-center gap-2">
-                          <span className="truncate">Security & Power Booth</span>
+                          <span className="truncate">Investigator A · Systems & Security</span>
                           {myRole === 'P1_SECURITY' && (
                             <span className="text-xs font-medium text-amber-400 shrink-0">· You</span>
                           )}
                         </div>
                         <p className="text-xs text-zinc-400 truncate mt-0.5">
-                          Breakers, CCTV feeds, DVR scrubber & maintenance chart
+                          Security Booth, Oscilloscope, Radio, Safelight & Sonar
                         </p>
                       </div>
                     </div>
@@ -178,7 +178,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                   </div>
                 </div>
 
-                {/* Slot 2: Flat 4B Study */}
+                {/* Slot 2: Field & Physical */}
                 <div
                   className={`p-4 rounded-xl border transition-colors ${
                     myRole === 'P2_STUDY'
@@ -193,13 +193,13 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                       </div>
                       <div className="min-w-0">
                         <div className="text-sm font-semibold text-white flex items-center gap-2">
-                          <span className="truncate">Flat 4B Study</span>
+                          <span className="truncate">Investigator B · Field & Hardware</span>
                           {myRole === 'P2_STUDY' && (
                             <span className="text-xs font-medium text-amber-400 shrink-0">· You</span>
                           )}
                         </div>
                         <p className="text-xs text-zinc-400 truncate mt-0.5">
-                          Desk drawer, junction box, wall safe & air vent slot
+                          Flat 4B, UV Sweeps, Pipe Manifolds, Darkroom & Vaults
                         </p>
                       </div>
                     </div>
@@ -239,7 +239,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                   className="w-full min-h-[52px] rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-[0.99] text-zinc-950 font-semibold text-base flex items-center justify-center gap-2 transition-all cursor-pointer"
                 >
                   <Play className="w-5 h-5 fill-current" />
-                  <span>Enter Locked Rooms · Start 30:00 Timer</span>
+                  <span>Begin 12-Chapter Escape Campaign</span>
                 </button>
               )}
             </div>
@@ -253,37 +253,36 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
     <div className="min-h-screen bg-[#0E1014] text-zinc-100 flex flex-col justify-center px-4 py-8">
       <div className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* Illustrated Noir Intro Panel */}
-        <div className="lg:col-span-6 relative rounded-2xl overflow-hidden border border-white/10 bg-[#161A22] min-h-[320px] flex flex-col justify-end">
+        <div className="lg:col-span-6 relative rounded-2xl overflow-hidden border border-white/10 bg-[#161A22] min-h-[340px] flex flex-col justify-end">
           <img
-            src={ROOM_ASSETS.cctvHallway}
-            alt="Dimly lit Chennai apartment corridor under surveillance during a blackout"
+            src={ROOM_ASSETS.ntpVaultLobby}
+            alt="Sub-basement fiber rack and grand brass airlock doors in Marina Towers"
             referrerPolicy="no-referrer"
             className="absolute inset-0 w-full h-full object-cover opacity-55"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0E1014] via-[#0E1014]/70 to-transparent" />
           <div className="relative p-6 sm:p-8">
             <div className="text-xs font-medium text-amber-400 tracking-wide">
-              Two-Player Online Escape Room · Chennai Blackout
+              2-Player Tactile Escape Campaign · Chennai Blackout
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-2">
               The Room Next Door
             </h1>
             <p className="text-sm sm:text-base text-zinc-300 leading-relaxed mt-3 max-w-lg">
-              Locked in adjoining rooms on Floor 4 during a power cut. Only one thing makes less sense than the deadbolts: your security monitor shows the hallway five minutes in the future.
+              Explore twelve connected floors of Marina Towers—spin brass dials, sweep UV blacklight, combine salvaged tools, balance industrial valves, and expose the +05:00 security conspiracy together.
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-zinc-400 mt-5">
-              <span>2 phones in portrait or desktop</span>
+              <span>12 connected chapters (~90+ min)</span>
               <span aria-hidden="true">·</span>
-              <span>Real-time puzzle sync</span>
+              <span>Drag, dial, UV & craft</span>
               <span aria-hidden="true">·</span>
-              <span>30 min backup battery</span>
+              <span>Auto-saved checkpoints</span>
             </div>
           </div>
         </div>
 
         {/* Create / Join Form */}
         <div className="lg:col-span-6 bg-[#161A22] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-center">
-          {/* Segmented Mode Tabs */}
           <div className="grid grid-cols-2 gap-1 p-1 rounded-xl bg-[#0E1014] border border-white/10">
             <button
               type="button"
@@ -293,9 +292,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                 onClearError();
               }}
               className={`min-h-[44px] rounded-lg text-sm font-medium transition-colors cursor-pointer ${
-                mode === 'CREATE'
-                  ? 'bg-[#1E2430] text-white'
-                  : 'text-zinc-400 hover:text-zinc-200'
+                mode === 'CREATE' ? 'bg-[#1E2430] text-white' : 'text-zinc-400 hover:text-zinc-200'
               }`}
             >
               Create Room
@@ -308,9 +305,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                 onClearError();
               }}
               className={`min-h-[44px] rounded-lg text-sm font-medium transition-colors cursor-pointer ${
-                mode === 'JOIN'
-                  ? 'bg-[#1E2430] text-white'
-                  : 'text-zinc-400 hover:text-zinc-200'
+                mode === 'JOIN' ? 'bg-[#1E2430] text-white' : 'text-zinc-400 hover:text-zinc-200'
               }`}
             >
               Join with Code
@@ -348,7 +343,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
             {mode === 'CREATE' ? (
               <div>
                 <span className="block text-xs font-medium text-zinc-300 mb-2">
-                  Starting Room
+                  Starting Role
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <button
@@ -363,8 +358,8 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                         : 'bg-[#0E1014] border-white/10 text-zinc-300 hover:border-white/25'
                     }`}
                   >
-                    <div className="text-sm font-semibold">Security Booth</div>
-                    <div className="text-xs text-zinc-400 mt-0.5">Cameras & power</div>
+                    <div className="text-sm font-semibold">Investigator A</div>
+                    <div className="text-xs text-zinc-400 mt-0.5">Systems & Security</div>
                   </button>
                   <button
                     type="button"
@@ -378,8 +373,8 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                         : 'bg-[#0E1014] border-white/10 text-zinc-300 hover:border-white/25'
                     }`}
                   >
-                    <div className="text-sm font-semibold">Flat 4B Study</div>
-                    <div className="text-xs text-zinc-400 mt-0.5">Drawers & wiring</div>
+                    <div className="text-sm font-semibold">Investigator B</div>
+                    <div className="text-xs text-zinc-400 mt-0.5">Field & Hardware</div>
                   </button>
                 </div>
               </div>

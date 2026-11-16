@@ -1,18 +1,465 @@
 [
   {
-    "code": "CHN241",
+    "code": "ADY411",
+    "status": "PLAYING",
+    "createdAt": 1794838450495,
+    "startedAt": 1794838450978,
+    "escapedAt": null,
+    "currentChapter": 4,
+    "completedChapters": [
+      1,
+      2,
+      3
+    ],
+    "chapterSplits": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    },
+    "chapterStartedElapsed": 1,
+    "elapsedSeconds": 387,
+    "hintsUsed": 1,
+    "unlockedHints": {
+      "1-1": 1
+    },
+    "players": {
+      "P1_SECURITY": {
+        "playerId": "d3b8312bc00b",
+        "name": "Arjun",
+        "role": "P1_SECURITY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      },
+      "P2_STUDY": {
+        "playerId": "57153bf0417d",
+        "name": "Meera",
+        "role": "P2_STUDY",
+        "connected": false,
+        "holdingLatch": false,
+        "holdingSince": null
+      }
+    },
+    "equipped": {
+      "P1_SECURITY": null,
+      "P2_STUDY": "uv_torch"
+    },
+    "puzzle": {
+      "ch1LightsOn": false,
+      "ch1MuralScanned": true,
+      "ch1BlotterSlid": true,
+      "ch1DrawerOpen": true,
+      "ch1ScrewsRemoved": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "ch1FuseInserted": true,
+      "ch1CctvChannel": 3,
+      "ch1CctvIR": true,
+      "ch1Switches": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "ch1Wires": [
+        "TEAL",
+        "AMBER",
+        "CRIMSON"
+      ],
+      "ch1Solved": true,
+      "ch2ChuteSlid": true,
+      "ch2UvFoundNotice": true,
+      "ch2UvFoundFrame": true,
+      "ch2PadlockOpen": true,
+      "ch2DvrMinute": 41,
+      "ch2KeyPassed": true,
+      "ch2CorridorGateOpen": true,
+      "ch3WeightsOnTray": [
+        200,
+        150,
+        100,
+        50,
+        20
+      ],
+      "ch3BrakeReleased": true,
+      "ch3TrapScrews": [
+        true,
+        true,
+        true
+      ],
+      "ch3LoomOrder": [
+        "GOLD",
+        "RED",
+        "GREEN",
+        "BLUE"
+      ],
+      "ch3MorseAcked": true,
+      "ch4Valves": [
+        45,
+        70,
+        30
+      ],
+      "ch4UvOilScanned": true,
+      "ch4OscFreq": 60,
+      "ch4OscPhase": 120,
+      "ch4OscLocked": true,
+      "ch4KnifeOrder": [],
+      "ch5SlidingTiles": [
+        1,
+        2,
+        3,
+        4,
+        0,
+        6,
+        7,
+        5,
+        8
+      ],
+      "ch5SlidingSolved": false,
+      "ch5RadioFreq": 935,
+      "ch5RadioLocked": false,
+      "ch5KeyPassed": false,
+      "ch5ChestUnlocked": false,
+      "ch6PipeRotations": [
+        0,
+        3,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2,
+        0,
+        1,
+        1
+      ],
+      "ch6PipesDrained": false,
+      "ch6UvBearingFound": false,
+      "ch6DishAzimuth": 90,
+      "ch6ShuntSeated": false,
+      "ch7Safelight": "WHITE",
+      "ch7Chemicals": {
+        "dev": 10,
+        "stop": 10,
+        "fix": 10
+      },
+      "ch7FilmDeveloped": false,
+      "ch7FilmLoupeRead": false,
+      "ch7ApothecaryOpen": false,
+      "ch8ScrapsAligned": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "ch8MicroficheScroll": 18,
+      "ch8MicroficheAligned": false,
+      "ch8CryptexLetters": [
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "ch8DumbwaiterOpen": false,
+      "ch9GearSlots": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "ch9FuelPressure": 20,
+      "ch9Primed": false,
+      "ch9LoadBreakers": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "ch9GeneratorRunning": false,
+      "ch10ReelDepth": 0,
+      "ch10KeyFished": false,
+      "ch10SluiceWheelA": 0,
+      "ch10SluiceWheelB": 45,
+      "ch10CisternDrained": false,
+      "ch11FiberPairs": {
+        "P1": "A",
+        "P2": "B",
+        "P3": "C",
+        "P4": "D"
+      },
+      "ch11FiberSolved": false,
+      "ch11NtpOffset": {
+        "h": 0,
+        "m": 5,
+        "s": 0
+      },
+      "ch11NtpSynced": false,
+      "ch11LockPins": [
+        false,
+        false,
+        false
+      ],
+      "ch12BypassPlugged": false,
+      "ch12MasterCipherOpen": false,
+      "ch12WheelLeft": 0,
+      "ch12WheelRight": 180,
+      "ch12DualHoldProgress": 0
+    },
+    "inventory": [
+      {
+        "id": "screwdriver_handle",
+        "name": "Insulated Grip Handle",
+        "description": "Rubberized electrician handle hidden beneath the desk blotter.",
+        "inspectNote": "Has a hex socket waiting for a steel flathead shaft.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "fuse_15a",
+        "name": "15A Ceramic Fuse",
+        "description": "Brass-capped cartridge fuse for Flat 4B’s wall junction box.",
+        "inspectNote": "Rated 240V 15A. Fits inside the Junction Box cartridge clip.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "consumed": true
+      },
+      {
+        "id": "flathead_bit",
+        "name": "6mm Brass Flathead Shaft",
+        "description": "Machined screwdriver blade found inside the brass drawer.",
+        "inspectNote": "Combine with the Insulated Grip Handle in your Bag to assemble a working screwdriver.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "brass_screwdriver",
+        "name": "Brass Flathead Screwdriver",
+        "description": "Assembled insulated electrician screwdriver. Equip to unscrew bolted junction panels.",
+        "inspectNote": "Insulated Bakelite grip locked onto a 6mm brass flathead shaft. Fits 4B junction cover screws.",
+        "category": "TOOL",
+        "holder": "P2_STUDY"
+      },
+      {
+        "id": "torch_housing",
+        "name": "Anodized Torch Barrel",
+        "description": "Empty 2xAA flashlight body jammed inside the corridor mail chute.",
+        "inspectNote": "Missing its emitter bulb module. Check for an LED capsule.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "uv_bulb",
+        "name": "365nm UV Emitter Bulb",
+        "description": "Ultraviolet inspection bulb wrapped in a yellow guard slip.",
+        "inspectNote": "Combine with Anodized Torch Barrel to build a working UV Torch.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "uv_torch",
+        "name": "UV Blacklight Torch",
+        "description": "365nm ultraviolet inspection torch. Equip to sweep dark surfaces for invisible ink.",
+        "inspectNote": "Emits 365nm UV beam. Reveals hidden audit ink, oil notes, and storm-wall markings.",
+        "category": "TOOL",
+        "holder": "SHARED"
+      },
+      {
+        "id": "service_lift_key",
+        "name": "Service Lift Master Key",
+        "description": "Heavy triangular steel elevator key. Pass through the Mail Chute to your partner.",
+        "inspectNote": "Stamped \"LIFT LOBBY 4F · OVERRIDE\". Required on the Corridor Lift Gate.",
+        "holder": "P2_STUDY",
+        "category": "KEY",
+        "consumed": true
+      }
+    ],
+    "clues": [
+      {
+        "id": "clue-intro",
+        "title": "Monsoon Blackout · 21:40 IST",
+        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp +05:00 ahead (21:45). Work across all 12 wings of Marina Towers to uncover why.",
+        "authorRole": "SYSTEM",
+        "chapter": 1,
+        "createdAt": 1794838450495
+      },
+      {
+        "id": "hint-1-1-t1",
+        "title": "Hint · Ch 01 · Darkness Mural & Desk Dial (Tier 1/3)",
+        "detail": "Subtle: Security must cut Study 4B’s ceiling lights so the plaster wall glows, then check the Maintenance Chart.",
+        "authorRole": "SYSTEM",
+        "chapter": 1,
+        "createdAt": 1794838450996
+      },
+      {
+        "id": "clue-6bf7fd66afe0",
+        "title": "Test Pin",
+        "detail": "Coordinating on Ch 1",
+        "authorRole": "P2_STUDY",
+        "chapter": 1,
+        "createdAt": 1794838451025
+      },
+      {
+        "id": "clue-ch1-drawer",
+        "title": "Brass Desk Drawer Unlocked (4816)",
+        "detail": "Found 15A Ceramic Fuse & 6mm Flathead Shaft. Combine screwdriver parts to open the Junction Box.",
+        "authorRole": "P2_STUDY",
+        "chapter": 1,
+        "createdAt": 1794838451142
+      },
+      {
+        "id": "clue-craft-brass_screwdriver",
+        "title": "Crafted: Brass Flathead Screwdriver",
+        "detail": "Insulated Bakelite grip locked onto a 6mm brass flathead shaft. Fits 4B junction cover screws.",
+        "authorRole": "P2_STUDY",
+        "chapter": 1,
+        "createdAt": 1794838451161
+      },
+      {
+        "id": "clue-ch1-complete",
+        "title": "Chapter 01 Cleared · Blackout on Floor 4",
+        "detail": "With the 240V relay balanced, the crawlspace hatch clicks open into the locked 4th-floor corridor.",
+        "authorRole": "SYSTEM",
+        "chapter": 1,
+        "createdAt": 1794838451184
+      },
+      {
+        "id": "clue-craft-uv_torch",
+        "title": "Crafted: UV Blacklight Torch",
+        "detail": "Emits 365nm UV beam. Reveals hidden audit ink, oil notes, and storm-wall markings.",
+        "authorRole": "P2_STUDY",
+        "chapter": 2,
+        "createdAt": 1794838451216
+      },
+      {
+        "id": "clue-ch2-notice",
+        "title": "UV Ink · Noticeboard (4F)",
+        "detail": "Invisible ink reads: \"KEYBOX RING 1 = 7 · RING 2 = 3 · Supervisor Shift 21:41–21:45\"",
+        "authorRole": "P2_STUDY",
+        "chapter": 2,
+        "createdAt": 1794838451219
+      },
+      {
+        "id": "clue-ch2-frame",
+        "title": "UV Ink · Corridor Doorframe",
+        "detail": "Scrawled by the deadbolt: \"KEYBOX RING 3 = 9 · Remap 4B Calendar stays 9527\"",
+        "authorRole": "P2_STUDY",
+        "chapter": 2,
+        "createdAt": 1794838451220
+      },
+      {
+        "id": "clue-ch2-complete",
+        "title": "Chapter 02 Cleared · The Locked Corridor",
+        "detail": "The elevator lobby gate slides free—leading both of you toward the stalled freight lift shaft.",
+        "authorRole": "SYSTEM",
+        "chapter": 2,
+        "createdAt": 1794838451230
+      },
+      {
+        "id": "clue-ch3-morse",
+        "title": "Shaft Voltmeter Signal Synced",
+        "detail": "5F Machine Room Terminal Order confirmed: GOLD → RED → GREEN → BLUE.",
+        "authorRole": "P2_STUDY",
+        "chapter": 3,
+        "createdAt": 1794838451256
+      },
+      {
+        "id": "clue-ch3-complete",
+        "title": "Chapter 03 Cleared · Service Lift Shaft",
+        "detail": "Steel cables groan as the lift brakes release cleanly, dropping you into the humming Mezzanine Meter Vault.",
+        "authorRole": "SYSTEM",
+        "chapter": 3,
+        "createdAt": 1794838451259
+      },
+      {
+        "id": "clue-ch4-oil",
+        "title": "UV Coolant Targets (Mezzanine)",
+        "detail": "Valve I = 45 PSI · Valve II = 70 PSI · Valve III = 30 PSI. Firing Order: L2 → L1 → L3.",
+        "authorRole": "P2_STUDY",
+        "chapter": 4,
+        "createdAt": 1794838451262
+      }
+    ],
+    "chat": [
+      {
+        "id": "chat-welcome",
+        "senderName": "Building Intercom",
+        "senderRole": "SYSTEM",
+        "text": "Emergency backup lights engaged. Both rooms locked on Floor 4. Explore your props, combine tools in your Field Bag, and coordinate on radio.",
+        "timestamp": 1794838450495
+      },
+      {
+        "id": "a7eba712c2b9",
+        "senderName": "Arjun",
+        "senderRole": "P1_SECURITY",
+        "text": "Cutting 4B ceiling light now!",
+        "timestamp": 1794838451005
+      }
+    ],
+    "lastEventBanner": {
+      "id": "014500720a98",
+      "text": "Breaker tripped — follow stamped order L2 → L1 → L3!"
+    }
+  },
+  {
+    "code": "ADY134",
     "status": "ESCAPED",
-    "createdAt": 1794751312532,
-    "startedAt": 1794751312590,
-    "escapedAt": 1794751315820,
-    "remainingSeconds": 1797,
+    "createdAt": 1794838527023,
+    "startedAt": 1794838527459,
+    "escapedAt": 1794838530791,
+    "currentChapter": 12,
+    "completedChapters": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "chapterSplits": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 3
+    },
+    "chapterStartedElapsed": 0,
     "elapsedSeconds": 3,
-    "auxiliaryUsed": false,
-    "hintsUsed": 0,
-    "unlockedHints": {},
+    "hintsUsed": 1,
+    "unlockedHints": {
+      "1-1": 1
+    },
     "players": {
       "P1_SECURITY": {
-        "playerId": "3f9245abb1dd",
+        "playerId": "24312696c080",
         "name": "Arjun",
         "role": "P1_SECURITY",
         "connected": false,
@@ -20,404 +467,401 @@
         "holdingSince": null
       },
       "P2_STUDY": {
-        "playerId": "08afca15eadf",
-        "name": "Kavya",
+        "playerId": "ea9a4f534796",
+        "name": "Meera",
         "role": "P2_STUDY",
         "connected": false,
         "holdingLatch": false,
         "holdingSince": null
       }
     },
+    "equipped": {
+      "P1_SECURITY": "master_bypass_rig",
+      "P2_STUDY": "vault_brass_key"
+    },
     "puzzle": {
-      "studyLightsOn": false,
-      "muralInspected": false,
-      "deskDrawerOpen": true,
-      "puzzle1Solved": true,
-      "fuseInserted": true,
-      "cctvChannel": 1,
-      "cctvNightVision": false,
-      "junctionSwitches": [
+      "ch1LightsOn": false,
+      "ch1MuralScanned": true,
+      "ch1BlotterSlid": true,
+      "ch1DrawerOpen": true,
+      "ch1ScrewsRemoved": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "ch1FuseInserted": true,
+      "ch1CctvChannel": 3,
+      "ch1CctvIR": true,
+      "ch1Switches": [
         true,
         false,
         true,
         true
       ],
-      "wireOrder": [
+      "ch1Wires": [
         "TEAL",
         "AMBER",
         "CRIMSON"
       ],
-      "puzzle2Solved": true,
-      "dvrMinute": 45,
-      "calendarTilted": true,
-      "wallSafeOpen": true,
-      "keycardLocation": "INSERTED",
-      "puzzle3Solved": true,
-      "dvrOffsetFixed": true,
-      "dualHoldProgress": 0
-    },
-    "inventory": [
-      {
-        "id": "fuse_15a",
-        "name": "15A Reserve Fuse",
-        "description": "Brass-capped ceramic cartridge fuse for Flat 4B’s wall junction box.",
-        "holder": "P2_STUDY"
-      },
-      {
-        "id": "blindspot_photo",
-        "name": "Corridor Mirror Polaroid",
-        "description": "Note on back: \"Check CAM 02 mirror reflection & CAM 03 in IR Night Vision once Junction Relay powers up.\"",
-        "holder": "SHARED"
-      },
-      {
-        "id": "override_keycard",
-        "name": "Security Override Keycard",
-        "description": "Magnetic supervisor card. Must be slid through the inter-room Air Vent Slot to the Security Booth.",
-        "holder": "P1_SECURITY"
-      },
-      {
-        "id": "ntp_memo",
-        "name": "Supervisor NTP Memo",
-        "description": "\"Set DVR clock +05:00 ahead to loop empty 21:40 corridor while clearing 4B. Reset clock & hold both latches to exit.\"",
-        "holder": "SHARED"
-      }
-    ],
-    "clues": [
-      {
-        "id": "clue-intro",
-        "title": "Monsoon Blackout · 21:40 IST",
-        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp 5 minutes ahead (21:45). Backup battery at 30:00.",
-        "authorRole": "SYSTEM",
-        "createdAt": 1794751312532
-      },
-      {
-        "id": "clue-drawer-solved",
-        "title": "Brass Desk Drawer Unlocked (4816)",
-        "detail": "Found 15A Reserve Fuse and a Polaroid mentioning CAM 02’s hallway mirror and CAM 03 IR mode.",
-        "authorRole": "P2_STUDY",
-        "createdAt": 1794751312691
-      },
-      {
-        "id": "clue-junction-solved",
-        "title": "240V Conduit Relay Balanced",
-        "detail": "Power restored to Flat 4B’s hidden wall safe and Security Booth’s CAM 01 DVR replay scrubber.",
-        "authorRole": "P2_STUDY",
-        "createdAt": 1794751313009
-      },
-      {
-        "id": "clue-safe-solved",
-        "title": "Wall Safe Opened (9527)",
-        "detail": "Retrieved Security Override Keycard and NTP Memo explaining the +05:00 loop. Slide the Keycard through the Air Vent Slot!",
-        "authorRole": "P2_STUDY",
-        "createdAt": 1794751313061
-      },
-      {
-        "id": "clue-clock-live",
-        "title": "DVR Clock Restored to LIVE (21:40)",
-        "detail": "False loop cleared. Both Corridor Maglocks are ARMED — hold both door latches simultaneously for 2.5s!",
-        "authorRole": "P1_SECURITY",
-        "createdAt": 1794751313166
-      }
-    ],
-    "chat": [
-      {
-        "id": "chat-welcome",
-        "senderName": "Building Intercom",
-        "senderRole": "SYSTEM",
-        "text": "Emergency backup active. Both rooms locked on Floor 4. Coordinate over radio to release the magnetic corridor locks.",
-        "timestamp": 1794751312532
-      }
-    ],
-    "lastEventBanner": {
-      "id": "8079ed584333",
-      "text": "Both magnetic corridor doors unlocked!"
-    }
-  },
-  {
-    "code": "ADY671",
-    "status": "PLAYING",
-    "createdAt": 1794751337797,
-    "startedAt": 1794751339474,
-    "escapedAt": null,
-    "remainingSeconds": 1695,
-    "elapsedSeconds": 105,
-    "auxiliaryUsed": false,
-    "hintsUsed": 0,
-    "unlockedHints": {},
-    "players": {
-      "P1_SECURITY": {
-        "playerId": "a18d273e7f09",
-        "name": "Arjun",
-        "role": "P1_SECURITY",
-        "connected": false,
-        "holdingLatch": false,
-        "holdingSince": null
-      },
-      "P2_STUDY": {
-        "playerId": "e68ede78a5ac",
-        "name": "Kavya",
-        "role": "P2_STUDY",
-        "connected": false,
-        "holdingLatch": false,
-        "holdingSince": null
-      }
-    },
-    "puzzle": {
-      "studyLightsOn": false,
-      "muralInspected": false,
-      "deskDrawerOpen": false,
-      "puzzle1Solved": false,
-      "fuseInserted": false,
-      "cctvChannel": 1,
-      "cctvNightVision": false,
-      "junctionSwitches": [
-        false,
+      "ch1Solved": true,
+      "ch2ChuteSlid": true,
+      "ch2UvFoundNotice": true,
+      "ch2UvFoundFrame": true,
+      "ch2PadlockOpen": true,
+      "ch2DvrMinute": 41,
+      "ch2KeyPassed": true,
+      "ch2CorridorGateOpen": true,
+      "ch3WeightsOnTray": [
+        200,
+        150,
+        100,
+        50,
+        20
+      ],
+      "ch3BrakeReleased": true,
+      "ch3TrapScrews": [
         true,
-        false,
-        false
-      ],
-      "wireOrder": [
-        "AMBER",
-        "TEAL",
-        "CRIMSON"
-      ],
-      "puzzle2Solved": false,
-      "dvrMinute": 45,
-      "calendarTilted": false,
-      "wallSafeOpen": false,
-      "keycardLocation": "SAFE",
-      "puzzle3Solved": false,
-      "dvrOffsetFixed": false,
-      "dualHoldProgress": 0
-    },
-    "inventory": [],
-    "clues": [
-      {
-        "id": "clue-intro",
-        "title": "Monsoon Blackout · 21:40 IST",
-        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp 5 minutes ahead (21:45). Backup battery at 30:00.",
-        "authorRole": "SYSTEM",
-        "createdAt": 1794751337797
-      },
-      {
-        "id": "clue-glow-symbols",
-        "title": "Flat 4B Glow Wall Symbols",
-        "detail": "1. Trident ↑ · 2. Crescent → · 3. Lotus ← · 4. Surge ↓",
-        "authorRole": "P2_STUDY",
-        "createdAt": 1794751340260
-      }
-    ],
-    "chat": [
-      {
-        "id": "chat-welcome",
-        "senderName": "Building Intercom",
-        "senderRole": "SYSTEM",
-        "text": "Emergency backup active. Both rooms locked on Floor 4. Coordinate over radio to release the magnetic corridor locks.",
-        "timestamp": 1794751337797
-      }
-    ],
-    "lastEventBanner": {
-      "id": "93913262d62c",
-      "text": "Security cut Flat 4B ceiling light — check the plaster wall!",
-      "targetRole": "P2_STUDY"
-    }
-  },
-  {
-    "code": "MYL478",
-    "status": "PLAYING",
-    "createdAt": 1794751396201,
-    "startedAt": 1794751398172,
-    "escapedAt": null,
-    "remainingSeconds": 1754,
-    "elapsedSeconds": 46,
-    "auxiliaryUsed": false,
-    "hintsUsed": 0,
-    "unlockedHints": {},
-    "players": {
-      "P1_SECURITY": {
-        "playerId": "1e2692b7aada",
-        "name": "Arjun",
-        "role": "P1_SECURITY",
-        "connected": false,
-        "holdingLatch": false,
-        "holdingSince": null
-      },
-      "P2_STUDY": {
-        "playerId": "8f8e00529152",
-        "name": "Kavya",
-        "role": "P2_STUDY",
-        "connected": false,
-        "holdingLatch": false,
-        "holdingSince": null
-      }
-    },
-    "puzzle": {
-      "studyLightsOn": false,
-      "muralInspected": false,
-      "deskDrawerOpen": true,
-      "puzzle1Solved": true,
-      "fuseInserted": true,
-      "cctvChannel": 2,
-      "cctvNightVision": true,
-      "junctionSwitches": [
-        false,
-        true,
-        false,
-        false
-      ],
-      "wireOrder": [
-        "AMBER",
-        "TEAL",
-        "CRIMSON"
-      ],
-      "puzzle2Solved": false,
-      "dvrMinute": 45,
-      "calendarTilted": false,
-      "wallSafeOpen": false,
-      "keycardLocation": "SAFE",
-      "puzzle3Solved": false,
-      "dvrOffsetFixed": false,
-      "dualHoldProgress": 0
-    },
-    "inventory": [
-      {
-        "id": "fuse_15a",
-        "name": "15A Reserve Fuse",
-        "description": "Brass-capped ceramic cartridge fuse for Flat 4B’s wall junction box.",
-        "holder": "P2_STUDY"
-      },
-      {
-        "id": "blindspot_photo",
-        "name": "Corridor Mirror Polaroid",
-        "description": "Note on back: \"Check CAM 02 mirror reflection & CAM 03 in IR Night Vision once Junction Relay powers up.\"",
-        "holder": "SHARED"
-      }
-    ],
-    "clues": [
-      {
-        "id": "clue-intro",
-        "title": "Monsoon Blackout · 21:40 IST",
-        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp 5 minutes ahead (21:45). Backup battery at 30:00.",
-        "authorRole": "SYSTEM",
-        "createdAt": 1794751396201
-      },
-      {
-        "id": "clue-glow-symbols",
-        "title": "Flat 4B Glow Wall Symbols",
-        "detail": "1. Trident ↑ · 2. Crescent → · 3. Lotus ← · 4. Surge ↓",
-        "authorRole": "P2_STUDY",
-        "createdAt": 1794751398955
-      },
-      {
-        "id": "clue-drawer-solved",
-        "title": "Brass Desk Drawer Unlocked (4816)",
-        "detail": "Found 15A Reserve Fuse and a Polaroid mentioning CAM 02’s hallway mirror and CAM 03 IR mode.",
-        "authorRole": "P2_STUDY",
-        "createdAt": 1794751399601
-      }
-    ],
-    "chat": [
-      {
-        "id": "chat-welcome",
-        "senderName": "Building Intercom",
-        "senderRole": "SYSTEM",
-        "text": "Emergency backup active. Both rooms locked on Floor 4. Coordinate over radio to release the magnetic corridor locks.",
-        "timestamp": 1794751396201
-      },
-      {
-        "id": "25d44bd5f3a9",
-        "senderName": "Kavya",
-        "senderRole": "P2_STUDY",
-        "text": "Drawer open — inserted 15A fuse",
-        "timestamp": 1794751399995
-      }
-    ],
-    "lastEventBanner": {
-      "id": "d04741ef64bb",
-      "text": "15A Fuse inserted! CAM 02, CAM 03 & CAM 04 are now online.",
-      "targetRole": "P1_SECURITY"
-    }
-  },
-  {
-    "code": "CHN440",
-    "status": "ESCAPED",
-    "createdAt": 1794751418573,
-    "startedAt": 1794751420206,
-    "escapedAt": 1794751431058,
-    "remainingSeconds": 1789,
-    "elapsedSeconds": 11,
-    "auxiliaryUsed": false,
-    "hintsUsed": 0,
-    "unlockedHints": {},
-    "players": {
-      "P1_SECURITY": {
-        "playerId": "ddd4bc887231",
-        "name": "Arjun",
-        "role": "P1_SECURITY",
-        "connected": false,
-        "holdingLatch": false,
-        "holdingSince": null
-      },
-      "P2_STUDY": {
-        "playerId": "4f58f26232b2",
-        "name": "Kavya",
-        "role": "P2_STUDY",
-        "connected": false,
-        "holdingLatch": false,
-        "holdingSince": null
-      }
-    },
-    "puzzle": {
-      "studyLightsOn": false,
-      "muralInspected": false,
-      "deskDrawerOpen": true,
-      "puzzle1Solved": true,
-      "fuseInserted": true,
-      "cctvChannel": 1,
-      "cctvNightVision": true,
-      "junctionSwitches": [
-        true,
-        false,
         true,
         true
       ],
-      "wireOrder": [
-        "TEAL",
-        "AMBER",
-        "CRIMSON"
+      "ch3LoomOrder": [
+        "GOLD",
+        "RED",
+        "GREEN",
+        "BLUE"
       ],
-      "puzzle2Solved": true,
-      "dvrMinute": 41,
-      "calendarTilted": true,
-      "wallSafeOpen": true,
-      "keycardLocation": "INSERTED",
-      "puzzle3Solved": true,
-      "dvrOffsetFixed": true,
-      "dualHoldProgress": 0
+      "ch3MorseAcked": true,
+      "ch4Valves": [
+        45,
+        70,
+        30
+      ],
+      "ch4UvOilScanned": true,
+      "ch4OscFreq": 60,
+      "ch4OscPhase": 120,
+      "ch4OscLocked": true,
+      "ch4KnifeOrder": [
+        "L2",
+        "L1",
+        "L3"
+      ],
+      "ch5SlidingTiles": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        0
+      ],
+      "ch5SlidingSolved": true,
+      "ch5RadioFreq": 1044,
+      "ch5RadioLocked": true,
+      "ch5KeyPassed": true,
+      "ch5ChestUnlocked": true,
+      "ch6PipeRotations": [
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        2,
+        2,
+        0,
+        1,
+        0
+      ],
+      "ch6PipesDrained": true,
+      "ch6UvBearingFound": true,
+      "ch6DishAzimuth": 215,
+      "ch6ShuntSeated": true,
+      "ch7Safelight": "AMBER",
+      "ch7Chemicals": {
+        "dev": 40,
+        "stop": 25,
+        "fix": 60
+      },
+      "ch7FilmDeveloped": true,
+      "ch7FilmLoupeRead": true,
+      "ch7ApothecaryOpen": true,
+      "ch8ScrapsAligned": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "ch8MicroficheScroll": 65,
+      "ch8MicroficheAligned": true,
+      "ch8CryptexLetters": [
+        "M",
+        "Y",
+        "L",
+        "4"
+      ],
+      "ch8DumbwaiterOpen": true,
+      "ch9GearSlots": [
+        12,
+        24,
+        16,
+        32
+      ],
+      "ch9FuelPressure": 70,
+      "ch9Primed": true,
+      "ch9LoadBreakers": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "ch9GeneratorRunning": true,
+      "ch10ReelDepth": 45,
+      "ch10KeyFished": true,
+      "ch10SluiceWheelA": 135,
+      "ch10SluiceWheelB": 270,
+      "ch10CisternDrained": true,
+      "ch11FiberPairs": {
+        "P1": "B",
+        "P2": "D",
+        "P3": "A",
+        "P4": "C"
+      },
+      "ch11FiberSolved": true,
+      "ch11NtpOffset": {
+        "h": 0,
+        "m": 0,
+        "s": 0
+      },
+      "ch11NtpSynced": true,
+      "ch11LockPins": [
+        true,
+        true,
+        true
+      ],
+      "ch12BypassPlugged": true,
+      "ch12MasterCipherOpen": true,
+      "ch12WheelLeft": 240,
+      "ch12WheelRight": 60,
+      "ch12DualHoldProgress": 0
     },
     "inventory": [
       {
+        "id": "screwdriver_handle",
+        "name": "Insulated Grip Handle",
+        "description": "Rubberized electrician handle hidden beneath the desk blotter.",
+        "inspectNote": "Has a hex socket waiting for a steel flathead shaft.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
         "id": "fuse_15a",
-        "name": "15A Reserve Fuse",
-        "description": "Brass-capped ceramic cartridge fuse for Flat 4B’s wall junction box.",
+        "name": "15A Ceramic Fuse",
+        "description": "Brass-capped cartridge fuse for Flat 4B’s wall junction box.",
+        "inspectNote": "Rated 240V 15A. Fits inside the Junction Box cartridge clip.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "consumed": true
+      },
+      {
+        "id": "flathead_bit",
+        "name": "6mm Brass Flathead Shaft",
+        "description": "Machined screwdriver blade found inside the brass drawer.",
+        "inspectNote": "Combine with the Insulated Grip Handle in your Bag to assemble a working screwdriver.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "brass_screwdriver",
+        "name": "Brass Flathead Screwdriver",
+        "description": "Assembled insulated electrician screwdriver. Equip to unscrew bolted junction panels.",
+        "inspectNote": "Insulated Bakelite grip locked onto a 6mm brass flathead shaft. Fits 4B junction cover screws.",
+        "category": "TOOL",
         "holder": "P2_STUDY"
       },
       {
-        "id": "blindspot_photo",
-        "name": "Corridor Mirror Polaroid",
-        "description": "Note on back: \"Check CAM 02 mirror reflection & CAM 03 in IR Night Vision once Junction Relay powers up.\"",
+        "id": "torch_housing",
+        "name": "Anodized Torch Barrel",
+        "description": "Empty 2xAA flashlight body jammed inside the corridor mail chute.",
+        "inspectNote": "Missing its emitter bulb module. Check for an LED capsule.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "uv_bulb",
+        "name": "365nm UV Emitter Bulb",
+        "description": "Ultraviolet inspection bulb wrapped in a yellow guard slip.",
+        "inspectNote": "Combine with Anodized Torch Barrel to build a working UV Torch.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "uv_torch",
+        "name": "UV Blacklight Torch",
+        "description": "365nm ultraviolet inspection torch. Equip to sweep dark surfaces for invisible ink.",
+        "inspectNote": "Emits 365nm UV beam. Reveals hidden audit ink, oil notes, and storm-wall markings.",
+        "category": "TOOL",
         "holder": "SHARED"
       },
       {
-        "id": "override_keycard",
-        "name": "Security Override Keycard",
-        "description": "Magnetic supervisor card. Must be slid through the inter-room Air Vent Slot to the Security Booth.",
-        "holder": "P1_SECURITY"
+        "id": "service_lift_key",
+        "name": "Service Lift Master Key",
+        "description": "Heavy triangular steel elevator key. Pass through the Mail Chute to your partner.",
+        "inspectNote": "Stamped \"LIFT LOBBY 4F · OVERRIDE\". Required on the Corridor Lift Gate.",
+        "holder": "P2_STUDY",
+        "category": "KEY",
+        "consumed": true
       },
       {
-        "id": "ntp_memo",
-        "name": "Supervisor NTP Memo",
-        "description": "\"Set DVR clock +05:00 ahead to loop empty 21:40 corridor while clearing 4B. Reset clock & hold both latches to exit.\"",
+        "id": "rusty_veranda_key",
+        "name": "Rusty Veranda Key",
+        "description": "Salt-corroded brass key found beside Sundaram’s vintage radio.",
+        "inspectNote": "Teeth are seized with monsoon rust—needs machine oil before forcing into a lock.",
+        "holder": "P2_STUDY",
+        "category": "KEY",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "machine_oil",
+        "name": "Singer Machine Oil Dropper",
+        "description": "Small brass spout oiler from Sundaram’s secret teak drawer.",
+        "inspectNote": "Note beside oiler reads: \"Tune monsoon radio to 104.4 MHz\".",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "oiled_veranda_key",
+        "name": "Oiled Brass Veranda Key",
+        "description": "Cleaned and lubricated brass key for Caretaker Sundaram’s veranda tool chest.",
+        "inspectNote": "Stamped \"VERANDA TOOL CHEST · 4B\". Smooth brass teeth free of monsoon corrosion.",
+        "category": "KEY",
+        "holder": "P2_STUDY",
+        "consumed": true
+      },
+      {
+        "id": "roof_crank",
+        "name": "Steel Roof-Hatch Crank",
+        "description": "Heavy square-drive crank used to unbolt the monsoon terrace access hatch.",
+        "inspectNote": "Engraved: \"EAST PARAPET ROOF RELAY\".",
+        "holder": "SHARED",
+        "category": "KEY"
+      },
+      {
+        "id": "copper_shunt",
+        "name": "Heavy Copper Shunt Bar",
+        "description": "Conductive busbar recovered from the drained rooftop junction pit.",
+        "inspectNote": "Keep safe—used both on the Roof Relay and Marina Towers’ final Master Bypass Rig.",
+        "holder": "SHARED",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "microfiche_reel_04",
+        "name": "Microfiche Reel #04",
+        "description": "Archival contractor audit reel hidden in the dispensary locker.",
+        "inspectNote": "Load into the Basement Accounting Microfiche Projector.",
+        "holder": "P1_SECURITY",
+        "category": "DOCUMENT"
+      },
+      {
+        "id": "ledger_frag_a",
+        "name": "Torn Ledger Fragment A",
+        "description": "Left half of a shredded generator invoice.",
+        "inspectNote": "Combine with Fragment B in the Accounting Archives.",
+        "holder": "SHARED",
+        "category": "DOCUMENT",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "ledger_frag_b",
+        "name": "Torn Ledger Fragment B",
+        "description": "Right half of the generator invoice recovered from the corkboard.",
+        "inspectNote": "Combine with Torn Ledger Fragment A in your Bag!",
+        "holder": "P2_STUDY",
+        "category": "DOCUMENT",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "reassembled_invoice",
+        "name": "Reassembled Audit Invoice",
+        "description": "Taped contractor invoice showing Marina Towers generator billing discrepancy.",
+        "inspectNote": "STAMPED CRYPTEX LETTERS: M - Y - L - 4. Contractor: Kaveri Backup Systems (Fake).",
+        "category": "DOCUMENT",
+        "holder": "SHARED"
+      },
+      {
+        "id": "neodymium_magnet",
+        "name": "Neodymium Recovery Magnet",
+        "description": "Heavy-duty industrial magnet from the cistern tool shelf.",
+        "inspectNote": "Eyelet ring at top accepts braided cord for vertical grate retrieval.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "nylon_cord",
+        "name": "6m Nylon Survey Cord",
+        "description": "Marked every 0.5 meters in bright yellow surveyor ink.",
+        "inspectNote": "Can be tied to a heavy magnet to fish objects from deep flooded grates.",
+        "holder": "P2_STUDY",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "magnetic_line",
+        "name": "Magnetic Retrieval Line",
+        "description": "Weighted magnet tied to 6m nylon survey cord. Equip to fish items through flooded grates.",
+        "inspectNote": "Knotted bowline loop rated for 8kg pull. Ideal for recovering dropped keys underwater.",
+        "category": "TOOL",
+        "holder": "P2_STUDY"
+      },
+      {
+        "id": "vault_brass_key",
+        "name": "Sub-Basement Vault Key",
+        "description": "Solid brass warded key fished from 4.5m beneath the cistern grate.",
+        "inspectNote": "Keep equipped for the NTP Time-Lock Vault Door in Chapter 11.",
+        "holder": "P2_STUDY",
+        "category": "KEY"
+      },
+      {
+        "id": "ntp_override_token",
+        "name": "NTP Supervisor Override Token",
+        "description": "Cryptographic hardware dongle pulled from the sub-basement NTP rack.",
+        "inspectNote": "Combine with Heavy Copper Shunt Bar → Master Lobby Bypass Rig.",
+        "holder": "SHARED",
+        "category": "PART",
+        "combinable": true,
+        "consumed": true
+      },
+      {
+        "id": "master_bypass_rig",
+        "name": "Master Lobby Bypass Rig",
+        "description": "Hardware-bridged NTP security dongle for Marina Towers’ main Art Deco airlock.",
+        "inspectNote": "Combines the Sub-Basement NTP Token with the Rooftop Copper Shunt for full lobby override.",
+        "category": "TOOL",
         "holder": "SHARED"
       }
     ],
@@ -425,44 +869,250 @@
       {
         "id": "clue-intro",
         "title": "Monsoon Blackout · 21:40 IST",
-        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp 5 minutes ahead (21:45). Backup battery at 30:00.",
+        "detail": "Security Booth CAM 01 shows the 4th-floor hallway outside Flat 4B with a timestamp +05:00 ahead (21:45). Work across all 12 wings of Marina Towers to uncover why.",
         "authorRole": "SYSTEM",
-        "createdAt": 1794751418573
+        "chapter": 1,
+        "createdAt": 1794838527023
       },
       {
-        "id": "clue-glow-symbols",
-        "title": "Flat 4B Glow Wall Symbols",
-        "detail": "1. Trident ↑ · 2. Crescent → · 3. Lotus ← · 4. Surge ↓",
+        "id": "hint-1-1-t1",
+        "title": "Hint · Ch 01 · Darkness Mural & Desk Dial (Tier 1/3)",
+        "detail": "Subtle: Security must cut Study 4B’s ceiling lights so the plaster wall glows, then check the Maintenance Chart.",
+        "authorRole": "SYSTEM",
+        "chapter": 1,
+        "createdAt": 1794838527516
+      },
+      {
+        "id": "clue-383e70ca603f",
+        "title": "Test Pin",
+        "detail": "Coordinating on Ch 1",
         "authorRole": "P2_STUDY",
-        "createdAt": 1794751421093
+        "chapter": 1,
+        "createdAt": 1794838527551
       },
       {
-        "id": "clue-drawer-solved",
+        "id": "clue-ch1-drawer",
         "title": "Brass Desk Drawer Unlocked (4816)",
-        "detail": "Found 15A Reserve Fuse and a Polaroid mentioning CAM 02’s hallway mirror and CAM 03 IR mode.",
+        "detail": "Found 15A Ceramic Fuse & 6mm Flathead Shaft. Combine screwdriver parts to open the Junction Box.",
         "authorRole": "P2_STUDY",
-        "createdAt": 1794751421780
+        "chapter": 1,
+        "createdAt": 1794838527643
       },
       {
-        "id": "clue-junction-solved",
-        "title": "240V Conduit Relay Balanced",
-        "detail": "Power restored to Flat 4B’s hidden wall safe and Security Booth’s CAM 01 DVR replay scrubber.",
+        "id": "clue-craft-brass_screwdriver",
+        "title": "Crafted: Brass Flathead Screwdriver",
+        "detail": "Insulated Bakelite grip locked onto a 6mm brass flathead shaft. Fits 4B junction cover screws.",
         "authorRole": "P2_STUDY",
-        "createdAt": 1794751425092
+        "chapter": 1,
+        "createdAt": 1794838527649
       },
       {
-        "id": "clue-safe-solved",
-        "title": "Wall Safe Opened (9527)",
-        "detail": "Retrieved Security Override Keycard and NTP Memo explaining the +05:00 loop. Slide the Keycard through the Air Vent Slot!",
-        "authorRole": "P2_STUDY",
-        "createdAt": 1794751426744
+        "id": "clue-ch1-complete",
+        "title": "Chapter 01 Cleared · Blackout on Floor 4",
+        "detail": "With the 240V relay balanced, the crawlspace hatch clicks open into the locked 4th-floor corridor.",
+        "authorRole": "SYSTEM",
+        "chapter": 1,
+        "createdAt": 1794838527711
       },
       {
-        "id": "clue-clock-live",
-        "title": "DVR Clock Restored to LIVE (21:40)",
-        "detail": "False loop cleared. Both Corridor Maglocks are ARMED — hold both door latches simultaneously for 2.5s!",
+        "id": "clue-craft-uv_torch",
+        "title": "Crafted: UV Blacklight Torch",
+        "detail": "Emits 365nm UV beam. Reveals hidden audit ink, oil notes, and storm-wall markings.",
+        "authorRole": "P2_STUDY",
+        "chapter": 2,
+        "createdAt": 1794838527720
+      },
+      {
+        "id": "clue-ch2-notice",
+        "title": "UV Ink · Noticeboard (4F)",
+        "detail": "Invisible ink reads: \"KEYBOX RING 1 = 7 · RING 2 = 3 · Supervisor Shift 21:41–21:45\"",
+        "authorRole": "P2_STUDY",
+        "chapter": 2,
+        "createdAt": 1794838527723
+      },
+      {
+        "id": "clue-ch2-frame",
+        "title": "UV Ink · Corridor Doorframe",
+        "detail": "Scrawled by the deadbolt: \"KEYBOX RING 3 = 9 · Remap 4B Calendar stays 9527\"",
+        "authorRole": "P2_STUDY",
+        "chapter": 2,
+        "createdAt": 1794838527723
+      },
+      {
+        "id": "clue-ch2-complete",
+        "title": "Chapter 02 Cleared · The Locked Corridor",
+        "detail": "The elevator lobby gate slides free—leading both of you toward the stalled freight lift shaft.",
+        "authorRole": "SYSTEM",
+        "chapter": 2,
+        "createdAt": 1794838527733
+      },
+      {
+        "id": "clue-ch3-morse",
+        "title": "Shaft Voltmeter Signal Synced",
+        "detail": "5F Machine Room Terminal Order confirmed: GOLD → RED → GREEN → BLUE.",
+        "authorRole": "P2_STUDY",
+        "chapter": 3,
+        "createdAt": 1794838527753
+      },
+      {
+        "id": "clue-ch3-complete",
+        "title": "Chapter 03 Cleared · Service Lift Shaft",
+        "detail": "Steel cables groan as the lift brakes release cleanly, dropping you into the humming Mezzanine Meter Vault.",
+        "authorRole": "SYSTEM",
+        "chapter": 3,
+        "createdAt": 1794838527758
+      },
+      {
+        "id": "clue-ch4-oil",
+        "title": "UV Coolant Targets (Mezzanine)",
+        "detail": "Valve I = 45 PSI · Valve II = 70 PSI · Valve III = 30 PSI. Firing Order: L2 → L1 → L3.",
+        "authorRole": "P2_STUDY",
+        "chapter": 4,
+        "createdAt": 1794838527763
+      },
+      {
+        "id": "clue-ch4-complete",
+        "title": "Chapter 04 Cleared · Mezzanine Meter Vault",
+        "detail": "Voltage steadies across the mezzanine bus, releasing the stairwell maglock down to Caretaker Sundaram’s quarters.",
+        "authorRole": "SYSTEM",
+        "chapter": 4,
+        "createdAt": 1794838527778
+      },
+      {
+        "id": "clue-ch5-teak",
+        "title": "Teak Puzzle Drawer Opened",
+        "detail": "Recovered Machine Oil Dropper and frequency slip: 104.4 MHz.",
+        "authorRole": "P2_STUDY",
+        "chapter": 5,
+        "createdAt": 1794838527783
+      },
+      {
+        "id": "clue-ch5-radio",
+        "title": "104.4 MHz Monsoon Bulletin",
+        "detail": "Broadcast loop: \"Kaveri 6, Marina 2, Adyar 9, Mylapore 4\" -> Tool Chest Code 6294.",
         "authorRole": "P1_SECURITY",
-        "createdAt": 1794751428113
+        "chapter": 5,
+        "createdAt": 1794838527786
+      },
+      {
+        "id": "clue-craft-oiled_veranda_key",
+        "title": "Crafted: Oiled Brass Veranda Key",
+        "detail": "Stamped \"VERANDA TOOL CHEST · 4B\". Smooth brass teeth free of monsoon corrosion.",
+        "authorRole": "P2_STUDY",
+        "chapter": 5,
+        "createdAt": 1794838527793
+      },
+      {
+        "id": "clue-ch5-complete",
+        "title": "Chapter 05 Cleared · Caretaker’s Quarters",
+        "detail": "Inside Sundaram’s tool chest lies the heavy steel roof-hatch crank—and proof someone paid him to stay quiet.",
+        "authorRole": "SYSTEM",
+        "chapter": 5,
+        "createdAt": 1794838527795
+      },
+      {
+        "id": "clue-ch6-bearing",
+        "title": "Rooftop Storm Bearing (UV)",
+        "detail": "UV markings by the parapet wind-vane read: \"RELAY AZIMUTH 215° SW\".",
+        "authorRole": "P2_STUDY",
+        "chapter": 6,
+        "createdAt": 1794838527830
+      },
+      {
+        "id": "clue-ch6-complete",
+        "title": "Chapter 06 Cleared · Monsoon Roof Relay",
+        "detail": "The rooftop shunt restores power to the ground-floor dispensary darkroom where surveillance film was hidden.",
+        "authorRole": "SYSTEM",
+        "chapter": 6,
+        "createdAt": 1794838527835
+      },
+      {
+        "id": "clue-ch7-frame14",
+        "title": "35mm Negative · Frame 14",
+        "detail": "Magnifier reveals supervisor’s dispensary locker stamp: 3-8-9-2.",
+        "authorRole": "P2_STUDY",
+        "chapter": 7,
+        "createdAt": 1794838527852
+      },
+      {
+        "id": "clue-ch7-complete",
+        "title": "Chapter 07 Cleared · Dispensary Darkroom",
+        "detail": "Frame 14 reveals the supervisor slipping audit folders into the basement archives—and yields Microfiche Reel #04.",
+        "authorRole": "SYSTEM",
+        "chapter": 7,
+        "createdAt": 1794838527853
+      },
+      {
+        "id": "clue-craft-reassembled_invoice",
+        "title": "Crafted: Reassembled Audit Invoice",
+        "detail": "STAMPED CRYPTEX LETTERS: M - Y - L - 4. Contractor: Kaveri Backup Systems (Fake).",
+        "authorRole": "P2_STUDY",
+        "chapter": 8,
+        "createdAt": 1794838527864
+      },
+      {
+        "id": "clue-ch8-microfiche",
+        "title": "Microfiche Reel #04 (65%)",
+        "detail": "Overlapping transparencies reveal Contractor Chute PIN: 4821.",
+        "authorRole": "P1_SECURITY",
+        "chapter": 8,
+        "createdAt": 1794838527866
+      },
+      {
+        "id": "clue-ch8-complete",
+        "title": "Chapter 08 Cleared · Accounting Archives",
+        "detail": "The dumbwaiter shaft opens down to the diesel garage, exposing fake generator repair invoices.",
+        "authorRole": "SYSTEM",
+        "chapter": 8,
+        "createdAt": 1794838527877
+      },
+      {
+        "id": "clue-ch9-complete",
+        "title": "Chapter 09 Cleared · Basement Diesel Bay",
+        "detail": "The backup diesel engine roars to life, illuminating the flooded cistern catwalk beneath the garage.",
+        "authorRole": "SYSTEM",
+        "chapter": 9,
+        "createdAt": 1794838527890
+      },
+      {
+        "id": "clue-craft-magnetic_line",
+        "title": "Crafted: Magnetic Retrieval Line",
+        "detail": "Knotted bowline loop rated for 8kg pull. Ideal for recovering dropped keys underwater.",
+        "authorRole": "P2_STUDY",
+        "chapter": 10,
+        "createdAt": 1794838527898
+      },
+      {
+        "id": "clue-ch10-complete",
+        "title": "Chapter 10 Cleared · Flooded Sub-Cistern",
+        "detail": "As cistern water drops below the sub-basement threshold, the steel door to the NTP Server Vault is exposed.",
+        "authorRole": "SYSTEM",
+        "chapter": 10,
+        "createdAt": 1794838527904
+      },
+      {
+        "id": "clue-ch11-complete",
+        "title": "Chapter 11 Cleared · Sub-Basement NTP Vault",
+        "detail": "Marina Towers’ clock snaps back to true live IST—leaving only the Grand Brass Lobby Airlock between you and the street.",
+        "authorRole": "SYSTEM",
+        "chapter": 11,
+        "createdAt": 1794838527912
+      },
+      {
+        "id": "clue-craft-master_bypass_rig",
+        "title": "Crafted: Master Lobby Bypass Rig",
+        "detail": "Combines the Sub-Basement NTP Token with the Rooftop Copper Shunt for full lobby override.",
+        "authorRole": "P1_SECURITY",
+        "chapter": 12,
+        "createdAt": 1794838527915
+      },
+      {
+        "id": "clue-ch12-complete",
+        "title": "Chapter 12 Cleared · Main Lobby Airlock",
+        "detail": "Both brass vault doors swing wide onto the rain-washed Chennai street. The +05:00 conspiracy is exposed.",
+        "authorRole": "SYSTEM",
+        "chapter": 12,
+        "createdAt": 1794838530791
       }
     ],
     "chat": [
@@ -470,20 +1120,20 @@
         "id": "chat-welcome",
         "senderName": "Building Intercom",
         "senderRole": "SYSTEM",
-        "text": "Emergency backup active. Both rooms locked on Floor 4. Coordinate over radio to release the magnetic corridor locks.",
-        "timestamp": 1794751418573
+        "text": "Emergency backup lights engaged. Both rooms locked on Floor 4. Explore your props, combine tools in your Field Bag, and coordinate on radio.",
+        "timestamp": 1794838527023
       },
       {
-        "id": "87aefdd2e24a",
-        "senderName": "Kavya",
-        "senderRole": "P2_STUDY",
-        "text": "Drawer open — inserted 15A fuse",
-        "timestamp": 1794751422180
+        "id": "f93a043495ca",
+        "senderName": "Arjun",
+        "senderRole": "P1_SECURITY",
+        "text": "Cutting 4B ceiling light now!",
+        "timestamp": 1794838527520
       }
     ],
     "lastEventBanner": {
-      "id": "a90f32bb3003",
-      "text": "Both magnetic corridor doors unlocked!"
+      "id": "ece30a8c3967",
+      "text": "Grand Lobby Airlock opened! You escaped Marina Towers!"
     }
   }
 ]

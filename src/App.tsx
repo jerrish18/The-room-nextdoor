@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  BatteryCharging,
   ClipboardList,
+  Clock,
   DoorClosed,
   Lightbulb,
+  Map,
   Package,
   Radio,
   Volume2,
@@ -13,14 +14,20 @@ import {
 } from 'lucide-react';
 import { useRoomSocket } from './hooks/useRoomSocket';
 import { LobbyScreen } from './components/LobbyScreen';
-import { HotspotId, RoomStage } from './components/RoomStage';
+import { RoomStage } from './components/RoomStage';
 import { InspectionModal } from './components/InspectionModal';
-import { ClueBoardPanel, HintDrawerModal, RadioChatPanel } from './components/ClueAndChatPanels';
-import { EscapedOverlay, OutOfPowerOverlay } from './components/OutcomeOverlays';
-import { formatCountdown, getActiveStage } from './shared/gameTypes';
+import { InventoryWorkbench } from './components/InventoryWorkbench';
+import {
+  ChapterMapModal,
+  ClueBoardPanel,
+  HintDrawerModal,
+  RadioChatPanel
+} from './components/ClueAndChatPanels';
+import { ChapterTransitionOverlay, EscapedOverlay } from './components/OutcomeOverlays';
+import { CHAPTER_CATALOG, formatSpeedrunClock, getChapterObjective } from './shared/gameTypes';
 import { soundFx } from './utils/soundFx';
 
-type MobileTab = 'ROOM' | 'CLUES' | 'RADIO';
+type MobileTab = 'ROOM' | 'BAG' | 'CLUES' | 'RADIO';
 
 export default function App() {
   const {
@@ -39,14 +46,19 @@ export default function App() {
 
   const [mobileTab, setMobileTab] = useState<MobileTab>('ROOM');
   const [desktopSideTab, setDesktopSideTab] = useState<'CLUES' | 'RADIO'>('CLUES');
-  const [activeHotspot, setActiveHotspot] = useState<HotspotId | null>(null);
+  const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
   const [hintsOpen, setHintsOpen] = useState(false);
+  const [mapOpen, setMapOpen] = useState(false);
   const [muted, setMuted] = useState(false);
-  const [selectedItemDesc, setSelectedItemDesc] = useState<string | null>(null);
   const [unreadChat, setUnreadChat] = useState(0);
   const [dismissedBannerId, setDismissedBannerId] = useState<string | null>(null);
 
   const prevChatCountRef = useRef<number>(0);
+
+  // Close open inspection sheets cleanly when chapter or status transitions
+  useEffect(() => {
+    setActiveHotspot(null);
+  }, [room?.currentChapter, room?.status]);
 
   useEffect(() => {
     if (!room) return;
@@ -73,7 +85,6 @@ export default function App() {
     if (!next) soundFx.click();
   };
 
-  // Show Lobby when no room or room still in LOBBY
   if (!room || !session || room.status === 'LOBBY') {
     return (
       <LobbyScreen
@@ -94,46 +105,39 @@ export default function App() {
   const myRole = session.role;
   const partnerRole = myRole === 'P1_SECURITY' ? 'P2_STUDY' : 'P1_SECURITY';
   const partner = room.players[partnerRole];
-  const activeStage = getActiveStage(room.puzzle);
+  const chMeta = CHAPTER_CATALOG.find((c) => c.chapter === room.currentChapter)!;
+  const objective = getChapterObjective(room);
+  const activeItemCount = room.inventory.filter((i) => !i.consumed).length;
   const showBanner =
     room.lastEventBanner &&
     room.lastEventBanner.id !== dismissedBannerId &&
     (!room.lastEventBanner.targetRole || room.lastEventBanner.targetRole === myRole);
 
-  const stageObjectives: Record<1 | 2 | 3 | 4, string> = {
-    1: 'Stage 1 · Cut Flat 4B ceiling power to reveal wall symbols & unlock Desk Drawer',
-    2: 'Stage 2 · Insert 15A fuse & match CAM 02/03 readings on Junction Box',
-    3: 'Stage 3 · Decode CAM 01 DVR taps using Calendar map to open Wall Safe',
-    4: 'Stage 4 · Pass Keycard via vent, reset +05:00 clock & hold both door latches'
-  };
-
   return (
     <div className="min-h-screen bg-[#0E1014] text-zinc-100 flex flex-col">
       {/* Compact Sticky Top HUD (52px height) */}
       <header className="sticky top-0 z-30 h-[52px] bg-[#161A22]/95 backdrop-blur-md border-b border-white/10 px-3 sm:px-6 flex items-center justify-between gap-2">
-        {/* Zone 1: Room Role & Code */}
+        {/* Zone 1: Active Chapter & Wing */}
         <div className="flex items-center gap-2 min-w-0">
-          <span className="text-sm font-bold text-white truncate">
-            {myRole === 'P1_SECURITY' ? 'Security Booth' : 'Flat 4B Study'}
+          <span className="font-mono text-xs font-bold text-amber-400 shrink-0">
+            CH {String(room.currentChapter).padStart(2, '0')}/12
           </span>
-          <span className="hidden sm:inline text-xs text-zinc-500">·</span>
-          <span className="hidden sm:inline font-mono text-xs text-zinc-400 shrink-0">
-            {room.code}
+          <span className="text-xs text-zinc-500">·</span>
+          <span className="text-xs sm:text-sm font-semibold text-white truncate">
+            {myRole === 'P1_SECURITY' ? chMeta.p1RoomName : chMeta.p2RoomName}
           </span>
         </div>
 
-        {/* Zone 2: Backup Battery Countdown */}
+        {/* Zone 2: Untimed Elapsed Speedrun Clock */}
         <div
-          className={`flex items-center gap-1.5 font-mono text-sm font-semibold shrink-0 ${
-            room.remainingSeconds <= 180 ? 'text-red-400' : 'text-amber-400'
-          }`}
-          title="Backup Battery Countdown"
+          className="flex items-center gap-1.5 font-mono text-sm font-semibold text-emerald-400 shrink-0"
+          title="Elapsed Speedrun Clock"
         >
-          <BatteryCharging className="w-4 h-4 shrink-0" />
-          <span>{formatCountdown(room.remainingSeconds)}</span>
+          <Clock className="w-4 h-4 shrink-0" />
+          <span>{formatSpeedrunClock(room.elapsedSeconds)}</span>
         </div>
 
-        {/* Zone 3: Partner Presence + Mute + Hint */}
+        {/* Zone 3: Partner Presence + Map + Mute + Hints */}
         <div className="flex items-center gap-1.5 shrink-0">
           <div
             className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#12161E] border border-white/10 text-xs"
@@ -151,6 +155,18 @@ export default function App() {
 
           <button
             type="button"
+            onClick={() => {
+              soundFx.click();
+              setMapOpen(true);
+            }}
+            aria-label="Open chapter map"
+            className="min-w-[40px] min-h-[40px] rounded-lg bg-[#1E2430] hover:bg-zinc-700 text-zinc-300 flex items-center justify-center cursor-pointer"
+          >
+            <Map className="w-4 h-4" />
+          </button>
+
+          <button
+            type="button"
             onClick={toggleMute}
             aria-label={muted ? 'Unmute sound effects' : 'Mute sound effects'}
             className="min-w-[40px] min-h-[40px] rounded-lg bg-[#1E2430] hover:bg-zinc-700 text-zinc-300 flex items-center justify-center cursor-pointer"
@@ -164,10 +180,10 @@ export default function App() {
               soundFx.click();
               setHintsOpen(true);
             }}
-            className="min-h-[40px] px-3 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
+            className="min-h-[40px] px-2.5 sm:px-3 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
           >
             <Lightbulb className="w-4 h-4" />
-            <span>Hints</span>
+            <span className="hidden sm:inline">Hints</span>
           </button>
         </div>
       </header>
@@ -181,10 +197,10 @@ export default function App() {
 
       {/* Main Content Workspace */}
       <main className="flex-1 w-full max-w-6xl mx-auto px-3 sm:px-6 pt-3 pb-24 lg:pb-8">
-        {/* Current Objective + Live Event Strip */}
+        {/* Current Chapter Objective + Event Banner */}
         <div className="mb-3 space-y-2">
           <div className="flex items-center justify-between gap-3 text-xs text-zinc-400 px-1">
-            <span className="truncate">{stageObjectives[activeStage]}</span>
+            <span className="truncate">{objective}</span>
             <span className="font-mono text-zinc-500 shrink-0">
               {partner?.connected ? `${partner.name} online` : 'Partner reconnecting'}
             </span>
@@ -204,68 +220,34 @@ export default function App() {
           )}
         </div>
 
-        {/* Desktop 2-Column Layout + Mobile Tab Switch */}
+        {/* Desktop 2-Column Layout + Mobile 4-Tab Switch */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          {/* Left Column: Room Exploration + Inventory (Visible on Desktop OR Mobile ROOM tab) */}
-          <div className={`lg:col-span-7 space-y-4 ${mobileTab !== 'ROOM' ? 'hidden lg:block' : ''}`}>
-            <RoomStage
-              room={room}
-              role={myRole}
-              onSelectHotspot={(id) => setActiveHotspot(id)}
-            />
+          {/* Left Column: Room Stage + Field Bag */}
+          <div className="lg:col-span-7 space-y-4">
+            <div className={mobileTab !== 'ROOM' ? 'hidden lg:block' : ''}>
+              <RoomStage
+                room={room}
+                role={myRole}
+                onSelectHotspot={(id) => setActiveHotspot(id)}
+              />
+            </div>
 
-            {/* Compact Inventory Bar */}
-            <div className="bg-[#161A22] border border-white/10 rounded-2xl p-3.5">
-              <div className="flex items-center justify-between text-xs text-zinc-400 mb-2">
-                <span className="flex items-center gap-1.5 font-medium text-zinc-300">
-                  <Package className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Recovered Items ({room.inventory.length})</span>
-                </span>
-                <span className="text-[11px] text-zinc-500">Tap item to inspect</span>
-              </div>
-
-              {room.inventory.length === 0 ? (
-                <div className="text-xs text-zinc-500 py-1">
-                  No items collected yet. Search drawers, safes, and vents.
-                </div>
-              ) : (
-                <div className="flex flex-wrap gap-2">
-                  {room.inventory.map((item) => (
-                    <button
-                      key={item.id}
-                      type="button"
-                      onClick={() => {
-                        soundFx.click();
-                        setSelectedItemDesc((prev) =>
-                          prev === `${item.name}: ${item.description}` ? null : `${item.name}: ${item.description}`
-                        );
-                      }}
-                      className="min-h-[40px] px-3 py-1.5 rounded-xl bg-[#1E2430] hover:bg-zinc-700 border border-white/10 text-xs font-medium text-zinc-100 flex items-center gap-2 cursor-pointer"
-                    >
-                      <span>{item.name}</span>
-                      <span className="text-[10px] text-amber-400">
-                        {item.holder === 'SHARED'
-                          ? 'Shared'
-                          : item.holder === myRole
-                          ? 'You'
-                          : 'Partner'}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              )}
-
-              {selectedItemDesc && (
-                <div className="mt-2.5 p-2.5 rounded-lg bg-[#12161E] border border-white/10 text-xs text-zinc-300">
-                  {selectedItemDesc}
-                </div>
-              )}
+            <div className={mobileTab !== 'BAG' ? 'hidden lg:block' : ''}>
+              <InventoryWorkbench
+                room={room}
+                role={myRole}
+                compact={mobileTab !== 'BAG'}
+                onAction={sendAction}
+              />
             </div>
           </div>
 
-          {/* Right Column: Clue Board & Radio Chat (Desktop Side Panel + Mobile Tab Content) */}
-          <div className={`lg:col-span-5 bg-[#161A22] border border-white/10 rounded-2xl p-4 sm:p-5 ${mobileTab === 'ROOM' ? 'hidden lg:block' : ''}`}>
-            {/* Desktop Segmented Toggle */}
+          {/* Right Column: Clue Board & Radio Chat */}
+          <div
+            className={`lg:col-span-5 bg-[#161A22] border border-white/10 rounded-2xl p-4 sm:p-5 ${
+              mobileTab !== 'CLUES' && mobileTab !== 'RADIO' ? 'hidden lg:block' : ''
+            }`}
+          >
             <div className="hidden lg:grid grid-cols-2 gap-1 p-1 rounded-xl bg-[#0E1014] border border-white/10 mb-4">
               <button
                 type="button"
@@ -293,7 +275,6 @@ export default function App() {
               </button>
             </div>
 
-            {/* Mobile & Desktop Content Routing */}
             <div className="lg:hidden">
               {mobileTab === 'CLUES' && (
                 <ClueBoardPanel room={room} role={myRole} onAction={sendAction} />
@@ -314,10 +295,10 @@ export default function App() {
         </div>
       </main>
 
-      {/* Fixed Mobile Bottom Thumb Bar (64px height) */}
+      {/* Fixed Mobile Bottom Thumb Bar (64px height, 4 tabs) */}
       <nav
         aria-label="Primary mobile navigation"
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-30 h-16 bg-[#161A22]/95 backdrop-blur-md border-t border-white/10 grid grid-cols-3 items-center px-2"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-30 h-16 bg-[#161A22]/95 backdrop-blur-md border-t border-white/10 grid grid-cols-4 items-center px-1"
       >
         <button
           type="button"
@@ -331,6 +312,20 @@ export default function App() {
         >
           <DoorClosed className="w-5 h-5" />
           <span className="text-[11px] font-medium">Room</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            soundFx.click();
+            setMobileTab('BAG');
+          }}
+          className={`min-h-[48px] flex flex-col items-center justify-center gap-0.5 rounded-xl transition-colors cursor-pointer ${
+            mobileTab === 'BAG' ? 'text-amber-400' : 'text-zinc-400'
+          }`}
+        >
+          <Package className="w-5 h-5" />
+          <span className="text-[11px] font-medium">Bag ({activeItemCount})</span>
         </button>
 
         <button
@@ -362,7 +357,7 @@ export default function App() {
             Radio {unreadChat > 0 ? `(${unreadChat})` : ''}
           </span>
           {unreadChat > 0 && (
-            <span className="absolute top-1.5 right-6 w-2 h-2 rounded-full bg-amber-400" />
+            <span className="absolute top-1.5 right-4 w-2 h-2 rounded-full bg-amber-400" />
           )}
         </button>
       </nav>
@@ -373,7 +368,6 @@ export default function App() {
         room={room}
         role={myRole}
         onClose={() => setActiveHotspot(null)}
-        onSwitchHotspot={(id) => setActiveHotspot(id)}
         onAction={sendAction}
       />
 
@@ -384,10 +378,15 @@ export default function App() {
         onUnlockHint={() => sendAction('hint:unlock')}
       />
 
-      <OutOfPowerOverlay
+      <ChapterMapModal
+        open={mapOpen}
         room={room}
-        onContinueAux={() => sendAction('timer:continue_aux')}
-        onRestart={() => sendAction('game:reset')}
+        onClose={() => setMapOpen(false)}
+      />
+
+      <ChapterTransitionOverlay
+        room={room}
+        onAdvance={() => sendAction('chapter:advance')}
       />
 
       <EscapedOverlay
